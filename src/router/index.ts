@@ -18,6 +18,10 @@ const routes = [
         path: "pubSub",
         name: 'pubSub',
         component: () => import("../views/pubSub.vue"),
+      },{
+        path: "waterFlow",
+        name: 'waterFlow',
+        component: () => import("../views/waterFlow.vue"),
       }
     ]
   },

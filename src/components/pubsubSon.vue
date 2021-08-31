@@ -21,7 +21,6 @@ export default defineComponent({
   },
   mounted() {
     this.addLeverListen();
-    console.log(999);
   },
 });
 </script>

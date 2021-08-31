@@ -12,8 +12,8 @@ export default [
     // },
   },
   {
-    path: "/pubSub",
-    name: "pubSub2",
+    path: "/waterFlow",
+    name: "waterFlow",
   },
   {
     path: "/pubSub",

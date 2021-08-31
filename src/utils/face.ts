@@ -5,7 +5,6 @@
 //   if (!val) return '';
 //   return Number(val)
 // }
-
 // 对象的this,对象的函数作为参数的this
 function thisFace() {
   var name = 22;

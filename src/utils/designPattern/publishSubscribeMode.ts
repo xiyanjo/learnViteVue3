@@ -18,8 +18,7 @@ class Dep{
   constructor(subs:{}={}) {
     this.subs = subs;
   }
-  add(key: string, fn: Function) {
-    console.log(key)
+  add(key: any, fn: Function) {
     if (!this.subs[key]) this.subs[key] = [];
     this.subs[key].push(fn);
   }
@@ -27,7 +26,7 @@ class Dep{
     let key = Array.prototype.shift.call(arguments);
     this.subs[key].forEach(fn =>  fn(...arguments))
   }
-  remove(key: string, fn: Function) {
+  remove(key: any, fn: Function) {
     // let key = Array.prototype.shift.call(this, arguments);
     if (!this.subs[key] || !fn) return false;
     this.subs[key].forEach((itemF, i) => {
