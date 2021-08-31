@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <label>
-      请输入等级：
+      请输入您的等级：
       <input type="number" v-model="lever" />
     </label>
     <button @click="notifyLever">发布等级</button>
