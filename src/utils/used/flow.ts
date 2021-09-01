@@ -46,15 +46,19 @@ function setPosition(root, left, top, h, w, src) {
   console.log('h',h)
   // 创建一个虚拟节点
   let d = document.createDocumentFragment();
-  let img = document.createElement('img');
-  img.src = 'src';
-  img.style.border = "1px solid red";
-  img.style.height = h + 'px';
-  img.style.width = w+'px';
-  img.style.left = left + 'px'
-  img.style.top = top + 'px'
-  img.style.position = 'absolute';
-  d.appendChild(img);
+  let div = document.createElement('div');
+  div.src = 'src';
+  // 批量修改的方法比较好
+  // let style = `height:${h}px;`
+  // img.setAttribute('style',style)
+  div.style.height = h + 'px';
+  div.style.width = w+'px';
+  div.style.left = left + 'px'
+  div.style.top = top + 'px'
+  div.style.position = 'absolute';
+  div.style.border = "1px solid red";
+
+  d.appendChild(div);
   root?.appendChild(d);
 }
 
