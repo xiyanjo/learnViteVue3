@@ -35,11 +35,15 @@
 // // 设计模式
 // import './designPattern/singleCase'//单例模式
 // import './designPattern/strategyMode'//策略模式
-import './designPattern/publishSubscribeMode'//发布订阅模式
+// import './designPattern/publishSubscribeMode'//发布订阅模式
 
 
 // 功能
-import './used/flow'//瀑布流
+// import './used/flow'//瀑布流
+import './used/callApplyBind'
+
+
+// import './optimize' //优化写法
 
 
 // base()
