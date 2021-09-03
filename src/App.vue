@@ -7,6 +7,7 @@
 </template>
 
 <script lang="ts">
+// 按需加载
 import { defineComponent } from "vue";
 // import HelloWorld from './components/HelloWorld.vue'
 
