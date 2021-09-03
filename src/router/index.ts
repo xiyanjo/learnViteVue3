@@ -1,9 +1,7 @@
 import {
   createRouter,
   createWebHistory,
-  createWebHashHistory,
-  RouteRecordRaw,
-} from "vue-router";
+} from 'vue-router';
 
 const routes = [
   {
@@ -22,6 +20,14 @@ const routes = [
         path: "waterFlow",
         name: 'waterFlow',
         component: () => import("../views/waterFlow.vue"),
+      },{
+        path: "tab",
+        name: 'tab',
+        component: () => import("../views/tab.vue"),
+      },{
+        path: "noteSys",
+        name: 'noteSys',
+        component: () => import("../views/noteSys.vue"),
       }
     ]
   },

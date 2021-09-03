@@ -1,4 +1,23 @@
-// 对象的this,对象的函数作为参数的this
+// 概述
+function thisInd() {
+  window.name='lili'
+ // 作为函数直接调用
+ function sayHi(age) {
+   console.log(this&&this.name,age)
+ }
+ // 相当于 sayHi.call(window,'18');
+ sayHi('18');//undefined 18
+
+ // 作为对象的方法调用
+ let obj = {
+   name: 'xiaoming',
+   sayHi:sayHi
+ }
+ obj.sayHi(20);//xiaoming 20
+}
+// thisInd()
+
+// 经典面试题： 对象的this,对象的函数作为参数的this
 function thisFace() {
   var name = 22;
   var a = {
@@ -24,20 +43,24 @@ function thisFace() {
 
 
 // 箭头函数的this:定义的时候绑定的(没有this,this是外层代码块this)
-var x = 11;
-var obj = {
-  x: 22,
-  say: () => {
-    console.log(this.x)//this==window
+function arrowThis() {
+  var x = 1;
+  var obj = {
+    x: 2,
+    say: () => {
+      console.log(this.x)//this==window
+    }
   }
-}
-// obj.say();
-var obj2 = {
-  birth: 1990,
-  getAge: function () {
-    var b = this.birth;
-    var fn = () => new Date().getFullYear() - this.birth;//箭头函数的父级上下文是 obj
-    return fn();
+  // obj.say();//es6中找不到this报错
+  var obj2 = {
+    birth: 1990,
+    getAge: function () {//箭头函数中使用this
+      var b = this.birth;
+      //箭头函数的父级上下文是 obj
+      var fn = () => new Date().getFullYear() - this.birth;
+      return fn();
+    }
   }
+  console.log(obj2.getAge());//31
 }
-// console.log(obj2.getAge());//31
+arrowThis()

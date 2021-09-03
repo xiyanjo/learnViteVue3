@@ -1,12 +1,6 @@
 <template>
   <div class="container">
-    <label>
-      请输入您的等级：
-      <input type="number" v-model="lever" />
-    </label>
-    <button @click="notifyLever">发布等级</button>
-
-    <pubsub-son></pubsub-son>
+    <h5>便签功能</h5>
   </div>
 </template>
 
@@ -23,13 +17,9 @@
         },
         data() {
             return {
-                lever: 1,
+                // lever: 1,
             };
         },
-        methods: {
-            notifyLever() {
-                pubSub.notify("lever", this.lever);
-            },
-        },
+        methods: {},
     });
 </script>

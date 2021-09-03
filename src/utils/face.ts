@@ -49,8 +49,8 @@ var obj2 = {
 }
 // console.log(obj2.getAge());//31
 
-
-
+// 立即执行函数
+// (function(i){})(i)
 
 
 
