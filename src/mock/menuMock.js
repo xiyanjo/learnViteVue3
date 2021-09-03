@@ -19,8 +19,8 @@ export default [{
         name: "tab",
     },
     {
-        path: "/noteSys",
-        name: "noteSys",
+        path: "/noteIndex",
+        name: "noteIndex",
     },
     {
         path: "/pubSub",

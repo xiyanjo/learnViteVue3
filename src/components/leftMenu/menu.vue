@@ -14,6 +14,7 @@
   </div>
 </template>
 <script lang="ts">
+
 import { defineComponent } from "vue";
 import menus from "@/mock/menuMock.js";
 export default defineComponent({

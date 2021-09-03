@@ -1,7 +1,7 @@
 <template>
-  <container>
+  <section>
     <div ref="fowBox" class="flow-box" @click="getImg" @scroll="scroll"></div>
-  </container>
+  </section>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -31,7 +31,7 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-container {
+section {
   .flow-box {
     height: 100%;
     overflow: auto;

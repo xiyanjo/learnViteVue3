@@ -6,7 +6,7 @@ import {
 const routes = [
   {
     path: "/",
-    redict: "/pubSub",
+    redirect: "/pubSub",
   },
   {
     path: "/",
@@ -25,9 +25,9 @@ const routes = [
         name: 'tab',
         component: () => import("../views/tab.vue"),
       },{
-        path: "noteSys",
-        name: 'noteSys',
-        component: () => import("../views/noteSys.vue"),
+        path: "noteIndex",
+        name: 'noteIndex',
+        component: () => import("../views/noteIndex.vue"),
       }
     ]
   },
