@@ -4,7 +4,7 @@
       <li
         v-for="item in menus"
         :key="item.name"
-        :class="{ active: item.name == current }"
+        :class="{ active: item.name == routerName }"
         @click="toPage(item)"
       >
         {{ item.name }}
@@ -21,13 +21,17 @@ export default defineComponent({
   data() {
     return {
       menus: menus,
-      current: "",
     };
+  },
+  computed:{
+    // 获取当前所在位置
+    routerName(){
+      return this.$route.name||'pubSub';
+    }
   },
   methods: {
     // 判断跳转路由/网页，当前路由名称高亮显示
     toPage(item) {
-      this.current = item.name;
       if (item.path.indexOf("http") != -1) location.href = item.path;
       this.$router.push(item.path);
     },
