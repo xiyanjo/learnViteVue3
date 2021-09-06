@@ -28,6 +28,10 @@ const routes = [
         path: "noteIndex",
         name: 'noteIndex',
         component: () => import("../views/noteIndex.vue"),
+      },{
+        path: "learnVuex",
+        name: 'learnVuex',
+        component: () => import("../views/learnVuex.vue"),
       }
     ]
   },
