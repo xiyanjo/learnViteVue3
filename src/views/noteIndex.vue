@@ -34,11 +34,7 @@ export default defineComponent({
     //   return this.$store.state.islogin
     // }
     // 获取store.state 方法二：
-    ...mapState(['islogin']),
-    // 使用getters方法一
-    goods(){
-      return this.$store.getters.goodsObj
-    },
+    ...mapState(['islogin','goods']),
     // 使用getters方法一
     getItemGood(){
       return this.$store.getters.getGoodById(1);

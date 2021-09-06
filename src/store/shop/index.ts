@@ -4,7 +4,7 @@ import mutations from './mutations';
 
 export default {
   state:{
-    islogin:true,
+    islogin:{name:'aaa'},
     goods: [
       { id: 1, type: 'apple',num:1 },
       { id: 2, type: 'andro' ,num:1},
