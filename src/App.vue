@@ -1,7 +1,5 @@
 <template>
-  <!-- <header>vue3+ts+vite</header> -->
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+   
   <!-- 路由出口 -->
   <router-view></router-view>
 </template>
@@ -9,7 +7,6 @@
 <script lang="ts">
 // 按需加载
 import { defineComponent } from "vue";
-// import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: "App",

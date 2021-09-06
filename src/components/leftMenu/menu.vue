@@ -10,7 +10,9 @@
         {{ item.name }}
       </li>
     </ul>
-    <router-view></router-view>
+    <div style="overflow: auto;height: 100%;">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script lang="ts">
