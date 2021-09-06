@@ -14,6 +14,8 @@
 <script lang="ts">
 import { defineComponent, reactive ,provide,readonly} from "vue";
 import { mapState,mapMutations ,mapActions } from 'vuex'
+import {getHomeData} from '@/api/home'
+
 export default defineComponent({
   name: "learnVuex",
   components: {
@@ -46,5 +48,8 @@ export default defineComponent({
       handleAdd: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
     })
   },
+  setup(){
+    getHomeData().then();
+  }
 });
 </script>

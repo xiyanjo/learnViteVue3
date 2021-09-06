@@ -1,6 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import path from 'path'
+import path from 'path';
+import { defineConfig } from 'vite';
+
+import vue from '@vitejs/plugin-vue';
 
 function _resolve(dir: string) {
   return path.resolve(__dirname, dir);
@@ -8,7 +9,15 @@ function _resolve(dir: string) {
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port:'3000'
+    port:'3000',
+
+    // proxy: {
+    //   '/api/': {
+    //       target: 'http://10.136.214.70:3001/',
+    //       changeOrigin: true,
+    //       // rewrite: path => path.replace(/^\/api/, '')
+    //   }
+    // }
   },
   resolve: {
     // 支持alias别名

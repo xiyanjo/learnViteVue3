@@ -26,7 +26,5 @@ export default createStore({
    * Action 提交的是 mutation，而不是直接变更状态。
    */
   actions,
-  // modules: {
-  //   shop
-  //  }
+  // modules: { shop }
 })
