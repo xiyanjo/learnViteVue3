@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent, reactive ,provide,readonly} from "vue";
 import { mapState,mapMutations ,mapActions } from 'vuex'
-import {getHomeData} from '@/api/home'
+import {getHomeData,getList} from '@/api/home'
 
 export default defineComponent({
   name: "learnVuex",
@@ -50,6 +50,7 @@ export default defineComponent({
   },
   setup(){
     getHomeData().then();
+    getList().then();
   }
 });
 </script>
