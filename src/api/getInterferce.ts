@@ -1,19 +1,19 @@
 import axios from 'axios';
 
 // import config from '@/config'
-// const baseUrl=process.env.NODE_ENV
+// const baseURL=process.env.NODE_ENV
 
-// 根据配置文件判断当前环境
-const baseUrl = '';
+// 配置不同环境的baseURL
+const baseURL = 'http://10.136.214.60:3001';
 class HttpRequest{
-  baseUrl:string
-  constructor(baseUrl:string){
-    this.baseUrl=baseUrl;
+  baseURL:string
+  constructor(baseURL:string){
+    this.baseURL=baseURL;
   }
   // 统一的options
   getInsideConfig(options:any={}){
     const config={
-      baseUrl:this.baseUrl,
+      baseURL:this.baseURL,
       timeout:10000,//10秒
       responseType:'json',//表示服务器响应的数据类型
       transformRequest:(req:any)=>{
@@ -59,6 +59,7 @@ class HttpRequest{
         return config;
       }, //请求错误
       error => {
+        console.log('req--error::',error,error.request)
         return Promise.reject(error);
       });
     // 添加响应拦截器
@@ -67,6 +68,7 @@ class HttpRequest{
         return res;
       }, // 响应错误 
       error=>{
+        console.log('res-error::',error)
         if (error.response) {
           switch (error.response.status) {
             case 401:
@@ -78,7 +80,6 @@ class HttpRequest{
         return Promise.reject(error);
       });
   }
-
   request(options:any={}){
     // 初始化options
     options={...this.getInsideConfig(options),...options};
@@ -89,5 +90,5 @@ class HttpRequest{
     return instance(options);
   }
 }
-export default new HttpRequest(baseUrl)
+export default new HttpRequest(baseURL)
 
