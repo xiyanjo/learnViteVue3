@@ -16,7 +16,7 @@ export default defineComponent({
   data() {
     return {
       tabs: ["tab1", "tab2", "tab3"],
-      contents: { tab1: "cont1", tab2: "tab2", tab3: "cont3" },
+      contents: { tab1: "cont1", tab2: tab2", tab3: "cont3" },
       showContent: "tab1",
     };
   },
