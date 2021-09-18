@@ -44,7 +44,7 @@ var a = Storage();
 var b = Storage();
 // a.setItem('a', 'a');
 // b.getItem('a');
-console.log(a,b,a===b)
+// console.log(a,b,a===b)
 
 class Person{
   constructor(name,sex) {

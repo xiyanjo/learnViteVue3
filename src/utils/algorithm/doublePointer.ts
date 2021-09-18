@@ -106,7 +106,7 @@ function lessBoats(limit = 5) {
   }
   return num;
 }
-console.log(lessBoats())
+// console.log(lessBoats())
 
 /**将数组奇数拍前面，偶数排后面
  * il偶 ir奇  -- 交换位置,l+=1;r-=1;

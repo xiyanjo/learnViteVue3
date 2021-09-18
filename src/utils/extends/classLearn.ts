@@ -46,11 +46,11 @@ class Child extends Parent{
     console.log('age',this.age)
   }
 }
-let child = new Child('lii', 20);
-child.sayAge();  child.sayHi();
+// let child = new Child('lii', 20);
+// child.sayAge();  child.sayHi();
 
-console.log(Child.__proto__ === Parent);//true
-console.log(Child.prototype.__proto__ === Parent.prototype);//true
+// console.log(Child.__proto__ === Parent);//true
+// console.log(Child.prototype.__proto__ === Parent.prototype);//true
 
 /** 定义类
  * constructor--构造方法，this--实例对象
@@ -171,10 +171,10 @@ class Cat extends Animal{
 /** 子类.__proto__.__proto__ === 父类.__proto__   子类原型的原型是父类的原型
  * 
  */
-Cat.toString('sss');
+// Cat.toString('sss');
 // 使用子类Cat生成实例
 let creatByCat = new Cat(5,6,7);
-creatByCat.toString('inin');
+// creatByCat.toString('inin');
 creatByCat._getSelfName('creatByCat');
 
 // 使用Animal类生成实例
@@ -192,7 +192,7 @@ printAge('uuuuuu'); */
 // console.log(Animal.prototype, Animal === Animal.prototype.constructor);
 // console.log('constructor', p.constructor === Animal.prototype.constructor);
 
-console.log('p--',p,'creatByCat---',creatByCat)
+// console.log('p--',p,'creatByCat---',creatByCat)
 
 
 //es6 非new Object形式调用的会忽略参数

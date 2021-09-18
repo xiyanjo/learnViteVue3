@@ -16,10 +16,10 @@ function test(a,c){
   function c() { }
   console.log('c',c)//function
 }
-test(1, 2)
+// test(1, 2)
 
-let obj = { name: 'lili' };
-console.log(test.name,obj);
+// let obj = { name: 'lili' };
+// console.log(test.name,obj);
 
 // ao{
 //   a:1, function a(){}

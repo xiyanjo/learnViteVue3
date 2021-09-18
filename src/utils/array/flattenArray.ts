@@ -36,6 +36,6 @@ let repeat2 = function (arr) {
   }
   return newArr;
 };
-console.log(repeat2(arr));
+// console.log(repeat2(arr));
 
-console.log('....',arr.concat(...arr))
+// console.log('....',arr.concat(...arr))

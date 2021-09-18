@@ -27,7 +27,7 @@ function print() {
 function print2() {
   console.log(person.name + '--2--' + person.age);
 }
-observe(print);
-observe(print2);
-person.name = 'lili';
-console.log(person.name)
+// observe(print);
+// observe(print2);
+// person.name = 'lili';
+// console.log(person.name)

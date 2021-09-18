@@ -99,4 +99,4 @@ function used(params: type) {
   }
   judgeType();
 }
-used();
+// used();

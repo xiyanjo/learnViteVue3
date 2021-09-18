@@ -1,6 +1,8 @@
 <template>
   <div class="section">
-    <h5>便签功能</h5>
+    <h5>组合式API</h5>
+    <div>使用ref添加响应式，count---{{count}}</div>
+
   </div>
   <items msg='111' @handleClick="doClick" />
   <p>fff组件中的ctotal---{{state.ctotal}}</p>
@@ -9,11 +11,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive ,provide,readonly} from "vue";
+import { defineComponent,ref, reactive ,provide,readonly} from "vue";
 import items from "comps/notes/items.vue";
 import toast from "comps/toast.vue";
 export default defineComponent({
-  name: "noteIndex",
+  name: "composeAPI",
   components: {
     items,toast
   },
@@ -24,6 +26,7 @@ export default defineComponent({
      
   },
   setup() {
+    const count = ref(23);
     const state = reactive({
       ctotal: 0,
     });
@@ -34,6 +37,7 @@ export default defineComponent({
     // readonly 子组件无法改变祖先组件中的数据
     provide('sos',readonly(state));//??当ctotal改变时，item未变化
     return {
+      count,
       state,
       doClick,
     };

@@ -63,4 +63,4 @@ function arrowThis() {
   }
   console.log(obj2.getAge());//31
 }
-arrowThis()
+// arrowThis()

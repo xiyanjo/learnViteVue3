@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
+import {  defineComponent } from "vue";
 import "../utils/index.ts";
 
 import imgLoad from "../utils/imgLoad.ts";
@@ -57,10 +57,6 @@ export default defineComponent({
       type: String,
       required: true,
     },
-  },
-  setup: () => {
-    const count = ref(0);
-    return { count };
   },
   methods: {},
   created() {

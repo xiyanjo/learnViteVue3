@@ -1,5 +1,6 @@
 <template>
-  <div>从state中获取登录信息？---{{islogin}}</div>
+  <!-- <div>\\转义符：\'--b:\b---f:\f--n:\n---t:\t</div> -->
+  <div>从state中获取登\n录信息？---{{islogin}}</div>
   <div v-for="(item,index) in goods" :key="item.id">
     <span>{{item.type}}</span>
      <span>{{item.num}}</span>
@@ -49,8 +50,8 @@ export default defineComponent({
     })
   },
   setup(){
-    getHomeData().then();
-    getList().then();
+    // getHomeData().then();
+    // getList().then();
   }
 });
 </script>

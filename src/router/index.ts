@@ -25,9 +25,9 @@ const routes = [
         name: 'tab',
         component: () => import("../views/tab.vue"),
       },{
-        path: "noteIndex",
-        name: 'noteIndex',
-        component: () => import("../views/noteIndex.vue"),
+        path: "composeAPI",
+        name: 'composeAPI',
+        component: () => import("../views/composeAPI.vue"),
       },{
         path: "learnVuex",
         name: 'learnVuex',

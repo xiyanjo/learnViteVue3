@@ -52,7 +52,7 @@ function asyncPromise() {
   //   console.log('e',e)
   // })
 }
-asyncPromise();
+// asyncPromise();
 
 // async/await 返回的promise需要手动赋值，否则为空
 async function timeout(ms:number) {

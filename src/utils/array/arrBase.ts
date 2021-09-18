@@ -76,5 +76,5 @@ function changeArr() {
   console.log('substr-截取-str', str, newStr);//是aa
 
 }
-changeArr();
+// changeArr();
 

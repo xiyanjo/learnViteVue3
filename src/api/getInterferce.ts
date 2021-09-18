@@ -15,6 +15,9 @@ class HttpRequest{
     const config={
       baseURL:this.baseURL,
       timeout:10000,//10秒
+      headers: {
+        "Content-Type": 'application/json'
+      },
       responseType:'json',//表示服务器响应的数据类型
       transformRequest:(req:any)=>{
         // 上传文件不需要将文件转为JSON字符串

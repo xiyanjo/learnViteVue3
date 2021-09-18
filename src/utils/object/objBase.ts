@@ -11,5 +11,5 @@ let proObj = {
   }
 }
 let obj = Object.create(proObj, { name: { value: 'xiaoming' }, age: { value: 18 } });
-obj.getName('from-obj');
-console.log('obj--',obj)
+// obj.getName('from-obj');
+// console.log('obj--',obj)

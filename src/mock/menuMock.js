@@ -20,8 +20,8 @@ export default [
     name: "tab",
   },
   {
-    path: "/noteIndex",
-    name: "noteIndex",
+    path: "/composeAPI",
+    name: "composeAPI",
   },
   {
     path: "/learnVuex",

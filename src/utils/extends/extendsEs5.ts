@@ -106,5 +106,5 @@ function  betterExtend() {
   c1.sayHi();
   c2.sayHi();
 }
-betterExtend();
+// betterExtend();
 

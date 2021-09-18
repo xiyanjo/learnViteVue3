@@ -46,13 +46,17 @@ function p2() {
 //       setTimeout(()=>{throw res},0)
 //     })
 //   }
-var promise = new Promise(function(resolve, reject) {
-  resolve('ok');
-  //resolve下面的代码也会执行
-  setTimeout(function () { throw new Error('test') }, 0)
-  console.log(777777)
-});
-promise
-  .then(function (value) { console.log(value) })
-  .catch(e => { console.log(e) });
 
+function learn(){
+  var promise = new Promise(function(resolve, reject) {
+    resolve('ok');
+    //resolve下面的代码也会执行
+    setTimeout(function () { throw new Error('test') }, 0)
+    // console.log(777777)
+  });
+  promise
+    .then(function (value) { console.log(value) })
+    .catch(e => { console.log(e) });
+}
+
+// learn();
